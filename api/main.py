@@ -4,14 +4,11 @@ import os
 import sys
 import uvicorn
 from typing import Optional
-from utils.openai_client import get_openai_response
-from utils.file_handler import save_upload_file_temporarily
+from api.utils.file_handler import save_upload_file_temporarily
+from api.utils.openai_client import get_openai_response
 
 # Import the functions you want to test directly
 from utils.functions import *
-from utils.openai_client import get_openai_response
-
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 app = FastAPI()
 
