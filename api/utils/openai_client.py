@@ -9,7 +9,7 @@ import shutil
 import subprocess
 from typing import Optional, Dict, Any, List
 from dotenv import load_dotenv
-from app.utils.functions import *
+from api.utils.functions import *
 
 load_dotenv()
 
