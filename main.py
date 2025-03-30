@@ -3,11 +3,11 @@ from fastapi.middleware.cors import CORSMiddleware
 import os
 import uvicorn
 from typing import Optional
-from app.utils.openai_client import get_openai_response
-from app.utils.file_handler import save_upload_file_temporarily
+from utils.openai_client import get_openai_response
+from utils.file_handler import save_upload_file_temporarily
 
 # Import the functions you want to test directly
-from app.utils.functions import *
+from utils.functions import *
 
 app = FastAPI(title="IITM Assignment API")
 
