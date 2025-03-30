@@ -1,6 +1,7 @@
 from fastapi import FastAPI, File, UploadFile, Form, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 import os
+import sys
 import uvicorn
 from typing import Optional
 from utils.openai_client import get_openai_response
@@ -8,6 +9,9 @@ from utils.file_handler import save_upload_file_temporarily
 
 # Import the functions you want to test directly
 from utils.functions import *
+from utils.openai_client import get_openai_response
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 app = FastAPI()
 
@@ -20,6 +24,8 @@ app.add_middleware(
 )
 
 
+
+    
 @app.post("/api/")
 async def process_question(
     question: str = Form(...), file: Optional[UploadFile] = File(None)
