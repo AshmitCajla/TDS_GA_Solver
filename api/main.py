@@ -6,9 +6,8 @@ import uvicorn
 from typing import Optional
 from api.utils.file_handler import save_upload_file_temporarily
 from api.utils.openai_client import get_openai_response
+from api.utils.functions import *
 
-# Import the functions you want to test directly
-from utils.functions import *
 
 app = FastAPI()
 
